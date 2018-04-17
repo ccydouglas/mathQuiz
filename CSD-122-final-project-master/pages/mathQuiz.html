@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math Quiz</title>
+	<!-- This is Douglas Chan Assignment -->
+	<link rel="stylesheet" type="text/css" href="../css/mathQuiz.css">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/mathQuiz3.js"></script>
+	<script src= "../js/nav.js"></script>
+</head>
+<body>
+	<!-- header -->
+ <header>
+                <h1>ARCADE</h1>
+                <div>
+                    <img  id = "logo_im" src = "../images/logo.png" alt = "logo">
+                </div>
+              
+                
+                    </header>
+                    <nav id="mySidenav" class="sidenav"> <!--added links to your site to nav- Agata-->
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                         <a href="../index.html">Home</a>
+                        <a href="../pages/combatGuess.html">Combat Guess</a>
+                        <a href="../pages/pacman.html">Pac-Man</a>
+                        <a href="../pages/TriviaMainPage.html">Trivia Game</a>
+                        
+                      </nav>
+                      
+                      <div id="main">
+                        <h2></h2>
+                        <p></p>
+                        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu </span>
+                      </div>
+                      
+                   
+    
+
+
+
+<!-- game main -->
+
+<p id="welcome">Hi</p>
+
+<div id="flip">Click to see the instructions</div>
+<p id="panel"> 
+	This game is design for you to practice your math. <br>
+	Answer the question in the middle of the screen<br>
+	You have 1 minute to do this quiz.<br> 
+	You got 5 points when you got a correct answer. 
+	<br>And dedcut 5 points if you answer it wrong. <br> 
+	<b>round your answer to the nearest integer</b><br>
+	<span id="gameLevel">SELECT the difficuly level to start the game</span> <br> 
+</p>
+
+
+<button id="easy" onclick="easy()" class="button">EASY</button>	
+<button id="hard" onclick="hard()" class="button">HARD</button>
+
+<div id="question"></div>
+<div id="finish"></div>
+
+<input type="text" id="ans">
+<input type="textarea" id="output" readonly="" rows="3" cols="4">
+
+<button id="submit" onclick="checkAnswer()" class="reset">Sumbit</button>	
+<button id="newGame" onclick="location.reload()" class="reset">New Game</button>
+<div id="result"></div>
+
+<hr>
+
+
+<input type="text" name="time" id="time" readonly="">
+<p id="second">seconds left</p>
+
+
+<script type="text/javascript">
+name();
+
+</script>
+
+		<!-- footer -->
+    
+        
+        </body>
+    <footer>
+
+        <div class="footer">
+            <br>
+            <p id="copyright">&copy; Agata Jelen, Kirill Sakovich, Chun Chan-Douglas, Amira S Morghem
+                <br> 
+                CSD 122 LWTECH 2018 All rights reserved. </p>
+                </div>
+    </footer>
+
+</body>
+</html>

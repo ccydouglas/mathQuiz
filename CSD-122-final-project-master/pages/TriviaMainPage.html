@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quiz Game</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="../js/nav.js"></script>
+		<script src="../js/quizObjects2.js"></script>
+        <script src = "../js/TriviaMain.js"></script>
+        <meta charset = "UTF-8">
+        <link rel = "stylesheet" href = "../css/TriviaMainPage.css" type ="text/css">
+		
+	</head>
+	<body>
+		<div>
+			<header>
+                <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARCADE</h1>
+                <div>
+                    <img  id = "logo_im" src = "../images/logo.png" alt = "logo">
+                </div>
+                
+            </header>    
+            <nav id="mySidenav" class="sidenav"> 
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                 <a href="../index.html">Home</a>
+                <a href="../pages/combatGuess.html">Combat Guess</a>
+                <a href="../pages/pacman.html">Pac-Man</a>
+                <a href="../pages/mathQuiz.html">Math Quiz</a>
+            </nav>
+            <div id="main">
+				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu </span>
+            </div>
+			
+			<div class = "grid">
+				<div id="quiz">
+					<h1>TRIVIA</h1>
+					<p id= "firstPage" class="firstPage"></p>
+					<div id="buttons" class="startBtn">
+						<button id="start" value="Start">Start your Quiz</button>
+					</div>
+				</div>	
+			</div>
+			<footer>
+				<div class="footer">
+                    <br>
+					<p id="copyright">&copy; Agata Jelen, Kirill Sakovich, Chun Chan-Douglas, Amira S Morghem
+                    <br> 
+                    CSD 122 LWTECH 2018 All rights reserved. </p>
+                </div>
+			</footer>	
+		</div>	
+	</body>
+</html>

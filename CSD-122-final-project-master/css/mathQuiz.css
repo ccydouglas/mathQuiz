@@ -1,0 +1,332 @@
+body{
+	text-align: center;
+	background-color: #F7F8E0;
+   /* min-height:100%;*/
+}
+
+#time{
+display: inline-block;
+text-align: center;
+width: 5%;
+}
+
+#easy,#hard{
+background: #64b9f2;
+  background-image: (top, #64b9f2, #2980b9);
+  border-radius: 23px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 6px 15px 10px 20px;
+  text-decoration: none;
+
+}
+
+
+#ans {
+  display: block;
+  box-sizing: content-box;
+  margin: auto;
+  font: normal 30px/normal Arial, Helvetica, sans-serif;
+  color: rgba(70,112,127,1);
+ text-align: center;
+  word-spacing: 2px;
+  background: rgba(252,252,252,1);
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#output{
+    font-size: 16px;
+    width: 400px;
+    height: 100px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-top: 2%;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color:  #b35900;
+    margin: 5px 150px;
+   box-shadow: 6px 3px 10px -4px rgba(0,0,0,0.75);
+}
+
+#panel {
+	font-size: 20px;
+    padding: 20px;
+    display: none;
+    background-color: #cc6600;
+}
+
+#question{
+	font-size: 90px;
+	text-align: center;
+}
+
+#welcome{
+	text-shadow:1px 1px 1px rgba(8,8,8,1);
+	font-weight:normal;
+	ont-style:italic;
+	text-transform:uppercase;
+	color:#000000;letter-spacing:0pt;
+	font-size:30px;
+	text-align:center;
+	font-family:palatino linotype, palatino, serif;line-height:1;
+}
+
+.reset{
+background: #64b9f2;
+  background-image: (top, #64b9f2, #2980b9);
+  border-radius: 23px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 6px 15px 10px 20px;
+  text-decoration: none;
+}
+
+#gameLevel{
+	color: SlateBlue  ;
+}
+
+
+#wrapper {
+width: 100%;
+margin: 0 auto;
+height: auto;
+border: solid 2px blue;
+
+/*z-index: -100;*/
+}
+/*-------------------------------------------------------------------Start header----------------------------------------------------------*/
+header {
+    padding: 3px;
+    width: 100%;
+    height: 15%;
+    position: relative;
+    background-color: rgb(121,85,72);
+    z-index: 1;
+} 
+header h1{
+    position: relative;
+    top: 0;
+    margin: .5% 40% auto 35%;
+    border: ridge 1px #FFFFFF;
+    color :#FFC107;
+    font-size: 4em;
+    text-align: center;
+    text-shadow: 2px 1px #FFFFFF;
+    /* background-color: #FFFFFF; */
+    width: 30%;
+    /* text-align: center; */
+    /* z-index: -1; */
+    display: inline-flex;
+    overflow: auto;
+}
+header div img#logo_im{
+    width: 5%;
+    height: 60%;
+    border-radius: 60px;
+    background-color: #FFFFFF;
+    z-index: 1;
+    padding: 5px;
+    margin: -5% 0 0 4%;
+    /* border: solid 6px #FFC107; */
+    display: inline-block;
+    position: relative;
+    overflow: auto;
+    float: left;
+}
+header div img#achievement_im{
+    
+    width: 4%;
+    height: 65%;
+    border-radius: 60px;
+    /* background-color: #FFFFFF; */
+    z-index: 1;
+    padding: 5px;
+    margin: -5% auto auto 65%;
+    /* border: solid 6px #FFC107; */
+    display: inline-block;
+    position: relative;
+    overflow: auto;
+    
+
+}
+
+/*-------------------------------------------------------------------finish header----------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------Start NAV----------------------------------------------------------*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* position: absolute; */
+    /* z-index: 1; */
+    top: 0;
+    left: 0;
+    background-color: gold;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+    /* z-index: 180; */
+    margin: 9.5% 0 0 0;
+    
+    font-family: sans-serif; 
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+    
+    font-family: sans-serif; 
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px;
+    margin-left: 30px;
+    z-index: 2;
+   
+    font-family: sans-serif; 
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+    /* z-index: 200; */
+    margin: 0% 0 0 0;
+    font-family: sans-serif; 
+    color: black;
+    width: 5%;
+    /* background-color: aqua; */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  
+}
+span{
+    /* z-index: 200; */
+}
+nav{
+    /* z-index: 200; */
+}
+/*-------------------------------------------------------------------Finish NAV----------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------Start Section----------------------------------------------------------*/
+#mySuperSection{
+    background-color: rgb(255, 255, 255);
+    float: right;
+    padding: 8px;
+    width:48%;
+    height: 60%;
+    margin: 0% 0% 0% 0%;
+    left: 21%;
+    position: absolute;
+    border: solid 2px purple;
+    z-index: -100;
+    /* margin: 40px 0 auto 23px; */
+}
+img#triviaLogo {
+    position: absolute;
+    border: 4px solid #ffffff;
+    border-radius: 14px;
+    padding: 2px;
+    width: 31%;
+    height: 38%;
+    /* margin: 0px 0px 50px 73%; */
+    margin: 3% 0% 0% 57%;
+}
+
+img#combatGuessLogo {
+    position: absolute;
+    border: 4px solid #ffffff;
+    border-radius: 14px;
+    padding: 6px;
+    width: 31%;
+    height: 38%;
+    margin: 3% 0% 0% 10%;
+}
+img#pacMan {
+    position: absolute;
+    border: 4px solid #ffffff;
+    border-radius: 14px;
+    padding: 9px;
+    width: 31%;
+    height: 38%;
+    margin: 33% 0% 0% 10%;
+}
+
+img#MathQuiz {
+    position: absolute;
+    border: 4px solid #ffffff;
+    border-radius: 14px;
+    padding: 9px;
+    width: 31%;
+    height: 38%;
+    margin: 33% 0% 0% 57%;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+
+/*-------------------------------------------------------------------Start header----------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------Start footer----------------------------------------------------------*/
+
+footer {
+        padding: 40px;
+        position:fixed;
+        bottom:0;
+        width:100%;
+        height:6%; 
+        color:black;
+        background-color:rgb(121,85,72);
+        text-align:center;
+        
+     }
+
+.clear {clear: both;}
+ 
+
+footer p#copyright{
+    
+    bottom: 10px;
+    z-index: -1;
+    color: rgb();;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px;  
+    padding: 25px;
+}
+
+/*-------------------------------------------------------------------Finish footer----------------------------------------------------------
+
+
+

@@ -1,0 +1,137 @@
+<!--DOCTYPE html-->
+<html>
+    <head>
+        <title>Combat guess</title>
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+        <link rel = "stylesheet" type "text/css" href = "../css/combatGuess.css">
+        <meta  charset = "UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <!--Kirill Sakovich-->
+        <script src="../js/jquery-3.2.1.js"></script>
+        <script src= "../js/nav.js" ></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src= "../js/combatGuess.js" type='text/javascript'></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </head>
+    <body>
+        <div id = "wrapper">
+        
+            <header>
+                <h1>CombatGuess</h1>
+                <div>
+                    <img  id = "logo_im" src = "../images/logo.png" alt = "logo">
+                </div>
+                <!-- <div>
+                        <img  id = "achievement_im" src = "../images/achievement.png" alt = "bowl image">
+                </div> -->
+                <nav id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    
+                    <a href="../index.html">Main menu</a>
+                    <a href="../pages/TriviaMainPage.html">Trivia Game</a>
+                    <a href="../pages/pacman.html">Pac-man</a>
+                    <a href="../pages/mathQuiz.html">Math Quiz</a>
+                </nav>
+                  
+                  <div id="main">
+                    <h2></h2>
+                    <p></p>
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu </span>
+                  </div>
+            </header>
+       
+        
+                <div id = "fightArea">
+                    
+                    
+                    <div id="currentPlayerHP"></div>
+                    <p id = "playerName" class ="name">Player</p>
+                    <p id = "playerHealthP" class = "hp">100 HP</p>
+                    <div id="currentCompHP"></div>
+                    <p id = "compName" class ="name">Computer</p>
+                    <p id = "compHealthP" class = "hp">100 HP</p>
+                    <div id = "playerImg"> </div>
+                    <div id = "ComputerImg"></div>
+                    
+                <form id = "blockSection">
+                     <p id = "blockTittle"  class = "myTitle"> Block</p>
+                    <input type="radio" id = "blockHead" class="radio_item_block" name = "toBlock" value="Head" checked>
+                    <label class="label_item_block" for="blockHead">Head</label>
+                    <br>
+                    <br>
+                    <input type="radio" id="BlockChest" class="radio_item_block" name = "toBlock" value="Chest">
+                    <label class="label_item_block" for="BlockChest">Chest</label>
+                    <br>
+                    <br>
+                    <input type="radio" id="blockHip" class="radio_item_block"  name = "toBlock" value="Hip">
+                    <label class="label_item_block" for="blockHip">Hip</label>
+                    <br>
+                    <br>
+                    <input type="radio" id="blockFeet" class="radio_item_block" name = "toBlock" value="Feet">
+                    <label class="label_item_block" for="blockFeet">Feet</label>     
+                    
+                </form>
+        
+                    <form id = "attackSection">
+                            <p id = "attackTittle" class = "myTitle">Attack</p>
+                        <input type = "radio" id = "attackHead" class="radio_item_attack" name = "toAttack" value="Head" checked>
+                        <label class="label_item_attack" for="attackHead"> Head</label>
+                        <br>
+                        <br>
+                        <input type = "radio" id = "attackChest" class="radio_item_attack" name = "toAttack" value="Chest">
+                        <label class="label_item_attack" for="attackChest"> Chest</label>
+                        <br>
+                        <br>
+                        
+                        <input type = "radio" id = "attackHip" class="radio_item_attack" name = "toAttack" value="Hip">
+                        <label class="label_item_attack" for="attackHip"> Hip</label>
+                        <br>
+                         <br>
+                        <input type = "radio" id = "attackFeet" class="radio_item_attack" name = "toAttack" value="Feet">
+                        <label class="label_item_attack" for="attackFeet">Feet </label>  
+                    </form>
+
+                    <form id = "fightButton">
+                        <input type = "button" id = "readyButton" class="button_item" value = "Fight!" onclick="fight(playerState, computerState)" >
+                        <label class = "fightButton" for="readyButton"><br>&nbsp;&nbsp;<br> &nbsp;</label>
+                    </form>
+                    <ul id = "compAttack">
+                        <li id = "attackedHead" class = "compAttack invisible">&nbsp;</li>
+                        <li id = "attackedChest" class = "compAttack invisible">&nbsp;</li>
+                        <li id = "attackedHip" class = "compAttack invisible">&nbsp;</li>
+                        <li id = "attackedFeet" class = "compAttack invisible">&nbsp;</li>
+                    </ul>
+                    <ul id = "compProtection">
+                        <li id = "protectedHead" class ="compProtection invisible">&nbsp;</li>
+                        <li id = "protectedChest" class ="compProtection invisible">&nbsp;</li>
+                        <li id = "protectedHip" class ="compProtection invisible">&nbsp;</li>
+                        <li id = "protectedFeet" class ="compProtection  invisible">&nbsp;</li>
+                    </ul>
+                    <ul id = "stuckedAttack">
+                        <li id = "stuckedInHead" class = "stuckedAttack invisible">&nbsp;</li>
+                        <li id = "stuckedInChest" class = "stuckedAttack  invisible">&nbsp;</li>
+                        <li id = "stuckedInHip" class = "stuckedAttack  invisible">&nbsp;</li>
+                        <li id = "stuckedInFeet" class = "stuckedAttack invisible">&nbsp;</li>
+                    </ul>
+                    <br>
+                    <br>
+                    
+                    <p id = "myConsole"></p>
+                    <img  id = "winner" src = "../images/winner.png" alt = "winner" class ="invisible">
+                    <img  id = "gameOver" src = "../images/gameOver3.png" alt = "Game Over" class ="invisible">
+                    <img  id = "tie" src = "../images/tie.png" alt = "tie" class ="invisible">
+               
+             </div>
+        
+    
+         <footer>
+
+            <div class="footer">
+                <br>
+                <p id="copyright">&copy; Agata Jelen, Kirill Sakovich, Chun Chan-Douglas, Amira S Morghem
+                    <br> 
+                    CSD 122 LWTECH 2018 All rights reserved. </p>
+            </div>
+        </footer>
+         </div> <!--wrapper ends here -->
+    </body>
+</html>

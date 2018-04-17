@@ -1,0 +1,79 @@
+<html>
+<!--Agata Jelen-->
+
+<meta charset="UTF-8">
+
+<head>
+    <title>
+        Pac-Man Game
+    </title>
+    <meta name="author" content="Agata Jelen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/nav.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/pacman.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<p>
+
+</p>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;PACMAN</h1>
+            <div>
+                <img id="logo_im" src="../images/logo.png" alt="logo">
+            </div>
+         <div id="main">
+                <h2></h2>
+                <p></p>
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu </span>
+            </div>
+        </header>
+       <!--Nav bar-->
+        
+        <nav id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+
+            <a href="../index.html">Home</a>
+            <a href="../pages/combatGuess.html">Combat Guess</a>
+            <a href="../pages/TriviaMainPage.html">Trivia Game</a>
+            <a href="../pages/mathQuiz.html">Math Quiz</a>
+        </nav>
+
+
+        
+
+
+        <!--Canvas with js files-->
+
+        <p>
+            <canvas id="myCanvas" width="510" height="510"></canvas>
+            <script type="text/javascript" src="../js/Pacman.js"></script>
+            <script type="text/javascript" src="../js/Ghost.js"></script>
+            <script type="text/javascript" src="../js/Grid.js"></script>
+            <script type="text/javascript" src="../js/Game.js"></script>
+        </p>
+
+
+
+        <footer>
+            <p>
+                <div class="footer">
+                    <p id="copyright">&copy; Agata Jelen, Kirill Sakovich, Chun Chan-Douglas, Amira S Morghem
+                        <br> CSD 122 LWTECH 2018 All rights reserved. </p>
+                </div>
+            </p>
+
+        </footer>
+
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>
